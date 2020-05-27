@@ -15,9 +15,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jms.core.JmsMessagingTemplate;
-import org.springframework.kafka.config.KafkaListenerContainerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -49,9 +47,7 @@ public class TestSpringbootTemplate {
 	@Autowired
 	private KafkaTemplate<String,String> kafkaTemplate;
 	
-	
-	@Autowired
-	private KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, String>> kafkaListener;
+
 	
 	@Test
 	public void testDatasource() {
